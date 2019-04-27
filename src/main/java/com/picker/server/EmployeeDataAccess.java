@@ -20,7 +20,6 @@ public class EmployeeDataAccess {
 			try {
 				Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
 				connection = DriverManager.getConnection(dbURL, user, password);
-				System.out.println("trying to connecto to the server");
 
 			} catch (InstantiationException e) {
 				// TODO Auto-generated catch block
@@ -36,13 +35,11 @@ public class EmployeeDataAccess {
 
 	public void shutdown() throws SQLException {
 		if (connection != null) {
-			System.out.println("closing connection");
 			connection.close();
 		}
 	}
 
 	public List<Employee> getEmployeeList(String workerLogin, String workerPassword) throws SQLException {
-		System.out.println(sql + workerLogin + sql2 + workerPassword + "';");
 		try (Statement statement = connection.createStatement();
 				ResultSet rSet = statement.executeQuery(sql + workerLogin + sql2 + workerPassword + "';");) {
 			List<Employee> employeeList = new ArrayList<>();
@@ -53,7 +50,6 @@ public class EmployeeDataAccess {
 				String userRights = rSet.getString("worker_Access_Rights");
 				Employee emp = new Employee(userID, userName, password, userRights);
 				employeeList.add(emp);
-//				System.out.println(employeeList);
 			}
 			return employeeList;
 

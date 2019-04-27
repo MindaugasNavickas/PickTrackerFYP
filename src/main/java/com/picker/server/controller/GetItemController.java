@@ -23,10 +23,8 @@ public class GetItemController {
 
 	@ResponseBody
 	public String getItems(@RequestParam(value = "itemID", required = true) String itemID) throws ClassNotFoundException, SQLException {
-		System.out.println("getPicks responseBody called");
 		ItemDataAccess itemDataAccess = new ItemDataAccess(dbURL, user, password);
 		List<Item> itemsList = itemDataAccess.getItem(itemID);
-		System.out.println(itemsList);
 		String json = new Gson().toJson(itemsList);
 		return json;
 	}

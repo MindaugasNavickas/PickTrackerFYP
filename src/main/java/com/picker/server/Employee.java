@@ -25,7 +25,6 @@ public class Employee {
 	}
 	
 	public String getUsernameLogin() {
-		System.out.println("returning username from Employee class " + usernameLogin);
 		return usernameLogin;
 	}
 

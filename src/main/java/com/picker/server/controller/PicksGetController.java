@@ -22,10 +22,8 @@ public class PicksGetController {
 
 	@ResponseBody
 	public String getPicks() throws ClassNotFoundException, SQLException {
-		System.out.println("getPicks responseBody called");
 		OrderDataAccess orderDataAccess = new OrderDataAccess(dbURL, user, password);
 		List<Order> ordersList = orderDataAccess.getOrderList();
-//		System.out.println(ordersList);
 		String json = new Gson().toJson(ordersList);
 		return json;
 	}

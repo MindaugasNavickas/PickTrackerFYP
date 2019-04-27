@@ -25,7 +25,6 @@ public class GetController {
 	public String userLogin(@RequestParam(value = "worker_login", required = true) String worker_login,
 			@RequestParam(value = "worker_password", required = true) String worker_password)
 			throws ClassNotFoundException, SQLException {
-		System.out.println("workerLogin: " + worker_login + "\tworkerPassword: " + worker_password);
 		EmployeeDataAccess employeeDataAccess = new EmployeeDataAccess(dbURL, user, password);
 		List<Employee> empList = employeeDataAccess.getEmployeeList(worker_login, worker_password);
 		String json = new Gson().toJson(empList);
