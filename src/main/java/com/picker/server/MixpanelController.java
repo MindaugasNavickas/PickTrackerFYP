@@ -1,4 +1,4 @@
-package com.example.picker2.picker2;
+package com.picker.server;
 import java.io.IOException;
 
 import org.json.JSONException;

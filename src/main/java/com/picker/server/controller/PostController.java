@@ -1,4 +1,4 @@
-package com.example.picker2.picker2.controller;
+package com.picker.server.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

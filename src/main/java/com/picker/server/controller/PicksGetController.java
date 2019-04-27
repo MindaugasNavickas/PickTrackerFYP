@@ -1,4 +1,4 @@
-package com.example.picker2.picker2.controller;
+package com.picker.server.controller;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -7,9 +7,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
-import com.example.picker2.picker2.Order;
-import com.example.picker2.picker2.OrderDataAccess;
+
 import com.google.gson.Gson;
+import com.picker.server.Order;
+import com.picker.server.OrderDataAccess;
 
 @RestController
 public class PicksGetController {

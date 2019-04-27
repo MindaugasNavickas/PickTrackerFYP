@@ -1,4 +1,4 @@
-package com.example.picker2.picker2;
+package com.picker.server;
 
 public class Item {
 	private String itemID;

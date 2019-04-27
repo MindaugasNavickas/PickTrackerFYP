@@ -1,4 +1,4 @@
-package com.example.picker2.picker2;
+package com.picker.server;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,4 +1,4 @@
-package com.example.picker2.picker2;
+package com.picker.server;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
